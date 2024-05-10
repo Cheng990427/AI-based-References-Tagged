@@ -1,0 +1,14 @@
+import glob
+import os
+# 指定要合并的文件夹路径
+folder_path = Processed_FileFold
+
+# 获取文件夹中所有txt文件的路径
+all_files = glob.glob(os.path.join(folder_path, "*.txt"))
+
+# 合并所有txt文件内容
+with open(Merged_Ref.txt, "w", encoding='utf-8') as outfile:
+    for file_path in all_files:
+        with open(file_path, "r", encoding='utf-8') as infile:
+            outfile.write(infile.read())
+            outfile.write("\n\n\n")
