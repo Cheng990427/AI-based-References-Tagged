@@ -13,7 +13,12 @@ def process_ref(ref_path):
     df = pd.DataFrame(ref)
     df.set_index(0, inplace=True)
     try:
-       abstract = df.loc['AB'].iloc[0]
+       abstract = df.loc['AB'].iloc[0]#在Refwork Tagged文献格式里面：AB [摘要内容]
+               ===============================
+
+                  可以根据需要增加标题/关键词等信息进行判断
+
+               ===============================
     except KeyError:
         content.append("\nK1 没有摘要")
         print("K1 没有摘要\n")
@@ -23,8 +28,6 @@ def process_ref(ref_path):
         answer = "========没有摘要信息========\n"
         return answer
        
-
-
     # Construct user input
     user_input = f"\
     Read the abstract below and answer the questions based on the abstract:\
