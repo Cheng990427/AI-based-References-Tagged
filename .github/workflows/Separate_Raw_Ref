@@ -1,0 +1,12 @@
+
+import re
+import os
+text = open(r"RefWork_Tagged.txt", encoding='utf-8').read()
+
+sections = text.split("\n\n\n")[:-1]
+num = 1
+for s in sections:
+    with open(os.path.join(r"Your_Ref_Path",f"Ref({num}).txt"),'w', encoding='utf-8') as f:
+        f.write(s)
+    num+=1
+    
