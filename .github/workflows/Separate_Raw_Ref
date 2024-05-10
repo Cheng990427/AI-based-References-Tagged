@@ -1,4 +1,4 @@
-
+#记得是从Zotero里面导出RefWork Tagged格式
 import re
 import os
 text = open(r"RefWork_Tagged.txt", encoding='utf-8').read()
